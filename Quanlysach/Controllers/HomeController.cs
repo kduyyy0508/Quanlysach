@@ -26,9 +26,9 @@ namespace Quanlysach.Controllers
 
             return View();
         }
-        public ActionResult Contact()
+        public ActionResult Contact1()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "aaaaaaaaaaaaaaaaaaaaaa";
 
             return View();
         }
