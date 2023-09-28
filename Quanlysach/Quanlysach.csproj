@@ -137,9 +137,13 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\banner.jpg" />
+    <Content Include="Images\banner1.jpg" />
+    <Content Include="Images\banner2.jpg" />
     <Content Include="Images\Book01.jpg" />
     <Content Include="Images\Book02.jpg" />
     <Content Include="Images\Book03.jpg" />
+    <Content Include="Images\Book04.jpg" />
+    <Content Include="Images\Book05.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
