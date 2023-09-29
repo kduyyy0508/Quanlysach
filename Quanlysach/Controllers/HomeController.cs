@@ -22,7 +22,7 @@ namespace Quanlysach.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "bbb";
+            ViewBag.Message = "bbbd";
 
             return View();
         }
