@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,9 +128,52 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BookstoreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookstoreModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookstoreModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookstoreModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookstoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookstoreModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookstoreModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CHUDE.cs">
+      <DependentUpon>BookstoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CTDATHANG.cs">
+      <DependentUpon>BookstoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DONDATHANG.cs">
+      <DependentUpon>BookstoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\KHACHHANG.cs">
+      <DependentUpon>BookstoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NHAXUATBAN.cs">
+      <DependentUpon>BookstoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SACH.cs">
+      <DependentUpon>BookstoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>BookstoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TACGIA.cs">
+      <DependentUpon>BookstoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VIETSACH.cs">
+      <DependentUpon>BookstoreModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -136,6 +187,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\01.jpg" />
+    <Content Include="Images\130318.jpg" />
+    <Content Include="Images\130499.jpg" />
+    <Content Include="Images\Autumn Leaves.jpg" />
     <Content Include="Images\banner.jpg" />
     <Content Include="Images\banner1.jpg" />
     <Content Include="Images\banner2.jpg" />
@@ -144,8 +199,55 @@
     <Content Include="Images\Book03.jpg" />
     <Content Include="Images\Book04.jpg" />
     <Content Include="Images\Book05.jpg" />
+    <Content Include="Images\Gt_Thcb.jpg" />
+    <Content Include="Images\Humpback Whale.jpg" />
+    <Content Include="Images\Kt.jpg" />
+    <Content Include="Images\KT0001.jpg" />
+    <Content Include="Images\KT0002.jpg" />
+    <Content Include="Images\KT0003.jpg" />
+    <Content Include="Images\KT0004.jpg" />
+    <Content Include="Images\KT0005.jpg" />
+    <Content Include="Images\KT0006.jpg" />
+    <Content Include="Images\KT0007.jpg" />
+    <Content Include="Images\KT0008.jpg" />
+    <Content Include="Images\KT0009.jpg" />
+    <Content Include="Images\LTWeb2005.jpg" />
+    <Content Include="Images\Me.jpg" />
+    <Content Include="Images\Oracle.jpg" />
+    <Content Include="Images\Oryx Antelope.jpg" />
+    <Content Include="Images\P0001.jpg" />
+    <Content Include="Images\P_0001.jpg" />
+    <Content Include="Images\Sample.jpg" />
+    <Content Include="Images\TH001.jpg" />
+    <Content Include="Images\TH002.jpg" />
+    <Content Include="Images\TH003.jpg" />
+    <Content Include="Images\TH004.jpg" />
+    <Content Include="Images\TH005.jpg" />
+    <Content Include="Images\TH006.jpg" />
+    <Content Include="Images\TH007.jpg" />
+    <Content Include="Images\TH008.jpg" />
+    <Content Include="Images\THCB.jpg" />
+    <Content Include="Images\TiengAnh01.jpg" />
+    <Content Include="Models\BookstoreModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookstoreModel.edmx</DependentUpon>
+      <LastGenOutput>BookstoreModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\BookstoreModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookstoreModel.edmx</DependentUpon>
+      <LastGenOutput>BookstoreModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\BookstoreModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BookstoreModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BookstoreModel.edmx.diagram">
+      <DependentUpon>BookstoreModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Images\Thumbs.db" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -171,10 +273,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\ViewPage1.cshtml" />
+    <Content Include="Views\Bookstore\Index.cshtml" />
+    <Content Include="Views\Bookstore\LayChuDe.cshtml" />
+    <Content Include="Views\Bookstore\LayNhaXuatBan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -188,6 +293,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

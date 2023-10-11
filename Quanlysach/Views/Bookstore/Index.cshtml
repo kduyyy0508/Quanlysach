@@ -1,0 +1,23 @@
+﻿@using Quanlysach.Models
+@model IEnumerable<Quanlysach.Models.SACH>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    @foreach (var sach in Model)
+    {
+        <div class="card col-sm-4 col-md-4 col-lg-4 d-flex align-items-stretch book-section">
+            <a href="@Url.Action("Details","Bookstore", new {id= sach.Masach})">
+                <img class="card-img-top book-picture" src="~/Images/@sach.Hinhminhhoa" alt="Card image" />
+
+            </a>
+            <div class="card-body">
+                <h4 class="card-title">@sach.Tensach</h4>
+                <p class="card-text">@sach.Dongia</p>
+            </div>
+        </div>
+    }
+</div>
+

@@ -33,21 +33,13 @@
             </style>
         </nav>
         <br />
+
         <div>
             <div class="row">
                 <div class="col-md-3" style="font-size:20px">
-                    <div class="title">CHỦ ĐỀ SÁCH</div>
-                    <ul class="list-group" style="font-size:18px">
-                        <li class="list-group-item">Khoa học</li>
-                        <li class="list-group-item">Lịch sử</li>
-                        <li class="list-group-item">Địa lý</li>
-                    </ul>
-                    <div class="title">NHÀ XUẤT BẢN</div>
-                    <ul class="list-group" style="font-size:18px">
-                        <li class="list-group-item">Alexander</li>
-                        <li class="list-group-item">Napoleon</li>
-                        <li class="list-group-item">Kim Dong</li>
-                    </ul>
+                    @Html.Action("LayChuDe", "Bookstore")
+                    @Html.Action("LayNhaXuatBan", "Bookstore")
+
                 </div>
                 <div class="col-md-9">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
