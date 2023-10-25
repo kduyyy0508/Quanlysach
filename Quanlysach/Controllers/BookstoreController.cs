@@ -33,6 +33,7 @@ namespace Quanlysach.Controllers
         }
         public ActionResult SPTheoChuDe(int id)
         {
+            //partial
             var dsSachTheoChuDe = database.SACHes.Where(sach => sach.MaCD == id).ToList();
             return View("Index", dsSachTheoChuDe);
         }

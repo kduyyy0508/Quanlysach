@@ -13,16 +13,20 @@
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <ul class="navbar-nav" style="font-size:20px">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">TRANG CHỦ</a>
+                    <a class="nav-link" href="/Bookstore/Index">TRANG CHỦ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">GIỎ HÀNG</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ĐĂNG NHẬP</a>
+                    <a class="nav-link" href="/User/DangNhap">ĐĂNG NHẬP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/User/Dangky">ĐĂNG KÝ</a>
                 </li>
             </ul>
-            <form class="form-inline ml-auto">
+
+            <form style="display:inline-block" class="form-inline ml-auto">
                 <input class="form-control mr-sm-2" type="text"style="width:2000px" placeholder="Tìm kiếm">
                 <button class="btn btn-outline-light" type="submit" style="background-color:aqua">Tìm kiếm </button>
             </form>
@@ -31,6 +35,9 @@
                     margin-right: 30px;
                 }
             </style>
+            <div style="display:inline-block; padding-left:15px" class="ml-auto">
+                    @Html.Action("GioHangPartial","GioHang")
+            </div>
         </nav>
         <br />
 

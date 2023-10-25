@@ -129,7 +129,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BookstoreController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -160,6 +162,7 @@
     <Compile Include="Models\KHACHHANG.cs">
       <DependentUpon>BookstoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MatHangMua.cs" />
     <Compile Include="Models\NHAXUATBAN.cs">
       <DependentUpon>BookstoreModel.tt</DependentUpon>
     </Compile>
@@ -199,6 +202,7 @@
     <Content Include="Images\Book03.jpg" />
     <Content Include="Images\Book04.jpg" />
     <Content Include="Images\Book05.jpg" />
+    <Content Include="Images\Giohang.gif" />
     <Content Include="Images\Gt_Thcb.jpg" />
     <Content Include="Images\Humpback Whale.jpg" />
     <Content Include="Images\Kt.jpg" />
@@ -277,6 +281,12 @@
     <Content Include="Views\Bookstore\Index.cshtml" />
     <Content Include="Views\Bookstore\LayChuDe.cshtml" />
     <Content Include="Views\Bookstore\LayNhaXuatBan.cshtml" />
+    <Content Include="Views\Bookstore\Details.cshtml" />
+    <Content Include="Views\Bookstore\SPTheoChuDe.cshtml" />
+    <Content Include="Views\User\DangNhap.cshtml" />
+    <Content Include="Views\User\DangKy.cshtml" />
+    <Content Include="Views\GioHang\HienThiGioHang.cshtml" />
+    <Content Include="Views\GioHang\GioHangPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
