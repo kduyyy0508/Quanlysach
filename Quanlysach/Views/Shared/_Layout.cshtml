@@ -15,15 +15,21 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/Bookstore/Index">TRANG CHỦ</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">GIỎ HÀNG</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/User/DangNhap">ĐĂNG NHẬP</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/User/Dangky">ĐĂNG KÝ</a>
-                </li>
+                @if(Session["Taikhoan"] != null)
+                { 
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/User/DangXuat">ĐĂNG XUẤT</a>
+                    </li>
+                }
+                @if (Session["Taikhoan"] == null)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="/User/DangNhap">ĐĂNG NHẬP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/User/Dangky">ĐĂNG KÝ</a>
+                    </li>
+                }
             </ul>
 
             <form style="display:inline-block" class="form-inline ml-auto">

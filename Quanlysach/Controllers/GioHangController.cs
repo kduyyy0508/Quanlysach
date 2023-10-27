@@ -77,5 +77,28 @@ namespace Quanlysach.Controllers
             return PartialView();
 
         }
+        public ActionResult XoaMatHang(int MaSP)
+        {
+            List<MatHangMua>gioHang=LayGioHang();
+            var sanpham = gioHang.FirstOrDefault(s => s.MaSach == MaSP);
+            if(sanpham !=null)
+            {
+                gioHang.RemoveAll(s =>s.MaSach== MaSP);
+                return RedirectToAction("HienThiGioHang");
+            }
+            if (gioHang.Count == 0)
+                return RedirectToAction("Index", "Bookstore");
+            return RedirectToAction("HienThiGioHang");
+        }
+        public ActionResult CapNhatGioHan(int MaSP,int SoLuong)
+        {
+            List<MatHangMua> gioHang = LayGioHang();
+            var sanpham = gioHang.FirstOrDefault(s => s.MaSach == MaSP);
+            if(sanpham!=null)
+            {
+                sanpham.SoLuong= SoLuong;
+            }
+            return RedirectToAction("HienThiGioHang");
+        }
     }
 }
