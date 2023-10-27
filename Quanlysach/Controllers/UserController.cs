@@ -77,7 +77,7 @@ namespace Quanlysach.Controllers
                 }
                 
             }
-            return View();
+            return RedirectToAction("Index","Bookstore");
         }
         public ActionResult DangXuat()
         {
