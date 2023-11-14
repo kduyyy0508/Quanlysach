@@ -34,5 +34,6 @@ namespace Quanlysach.Models
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TACGIA> TACGIAs { get; set; }
         public virtual DbSet<VIETSACH> VIETSACHes { get; set; }
+        public virtual DbSet<ADMIN> ADMINs { get; set; }
     }
 }

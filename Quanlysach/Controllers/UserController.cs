@@ -25,7 +25,7 @@ namespace Quanlysach.Controllers
         [HttpPost]
         public ActionResult DangKy(KHACHHANG kh)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 if (string.IsNullOrEmpty(kh.HoTenKH))
                     ModelState.AddModelError(string.Empty, "Còn trống");
@@ -77,7 +77,7 @@ namespace Quanlysach.Controllers
                 }
                 
             }
-            return View();
+            return RedirectToAction("Index","Bookstore");
         }
         public ActionResult DangXuat()
         {
